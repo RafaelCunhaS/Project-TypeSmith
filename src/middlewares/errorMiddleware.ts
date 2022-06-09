@@ -4,7 +4,7 @@ import ErrorHandler from '../interfaces/error.interface';
 
 export default (error: ErrorHandler, _req: Request, res: Response, _next: NextFunction) => {
   if (error.status) {
-    return res.status(error.status).json(error.message);
+    return res.status(error.status).json({ message: error.message });
   }
 
   console.error(error);
