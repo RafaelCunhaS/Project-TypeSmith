@@ -1,8 +1,10 @@
-export interface ProductWithIds {
+export interface Product {
   id: number;
   name: string;
   amount: string;
   orderId: number;
 }
 
-export type Product = Omit<ProductWithIds, 'id' | 'orderId'>;
+export type ProductWithoutIds = Omit<Product, 'id' | 'orderId'>;
+
+export type ProductWithId = Omit<Product, 'orderId'>;
