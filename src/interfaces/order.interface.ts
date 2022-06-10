@@ -3,3 +3,12 @@ export interface Order {
   userId: number,
   productsIds: number[],
 }
+
+export interface ReceiveOrder {
+  productsIds: number[]
+}
+
+export interface CreatedOrder {
+  userId: number,
+  productsIds: number[]
+}
